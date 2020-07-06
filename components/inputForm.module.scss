@@ -1,0 +1,96 @@
+.frame {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.100);
+    margin-top: 60px;
+    border-radius: 10px;
+    border: 1px solid #f6f6f6;
+    position: relative;
+    background-color: white;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.input {
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid #dfdfdf;
+    outline: none;
+    transition: all .3s ease;
+    &:focus {
+        border-color: #1582ff;
+        box-shadow: 0px 0px 3px 2px #bfddff;
+    }
+    &::placeholder {
+        color: #959595;
+        font-style: italic;
+    }
+}
+.fluid {
+    width: 100%;
+}
+.inputNote {
+    font-size: 13px;
+    margin: 5px 0;
+    margin-bottom: 16px;
+    color: #616161;
+}
+.lastNote {
+    margin-bottom: 0px;
+}
+
+.result {
+    transition: all .3s ease;
+    position: absolute;
+    bottom: 0;
+    background-color: #fbfbfb;
+    width: 100%;
+    z-index: -1;
+    transform: translate(-30px, -10px);
+    box-shadow: inset 0 0 0 1px #eee;
+    border-left: 4px solid #1582ff;
+    overflow: hidden;
+}
+.showResult {
+    transform: translate(-30px, calc(100% + 20px));
+}
+.socket {
+    padding: 40px 30px;
+    position: relative;
+}
+.copyButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    padding: 8px 10px;
+    width: 54px;
+    border: 0px;
+    background-color: #1582ff;
+    color: white;
+    transition: all .3s ease;
+    outline: none;
+    &:hover {
+        background-color: #51a2ff
+    }
+}
+
+.copyNotif {
+    transition: all .4s ease;
+    background-color: #222222;
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+    right: 54px;
+    padding: 7px 10px;
+    color: white;
+    transform: translateX(100%);
+}
+.copied {
+    transform: translateX(0);
+}
